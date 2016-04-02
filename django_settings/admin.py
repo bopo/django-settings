@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+ # -*- coding: utf-8 -*-
 # framework
 from django.core.urlresolvers import reverse
 from django.contrib import admin
@@ -89,7 +89,7 @@ class SettingAdmin(admin.ModelAdmin):
     def response_change(self, request, obj):
         response = super(SettingAdmin, self).response_change(request, obj)
         app_label = obj._meta.app_label
-        module_name = obj._meta.module_name
+        module_name = obj._meta.model_name
 
         if '_addanother' in request.POST:
             url_name = 'admin:%s_%s_add' % (app_label, module_name)

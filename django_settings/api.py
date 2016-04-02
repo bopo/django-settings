@@ -7,8 +7,9 @@ from .lazyimport import lazyimport
 # shortcuts
 get = data.get
 set = data.set
-exists = data.exists
 all = data.all
+
+exists = data.exists
 type_names = data.type_names
 
 
